@@ -1,0 +1,122 @@
+Cmp-Mod V01 Created by Cvpcb (2015-02-26 BZR 5453)-product   date = Fr 24 Apr 2015 19:12:29 CEST
+
+BeginCmp
+TimeStamp = /553A6EFF;
+Reference = C1;
+ValeurCmp = 22p;
+IdModule  = rcl:C_200;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A704D;
+Reference = C2;
+ValeurCmp = 100n;
+IdModule  = rcl:C_200;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A6EBB;
+Reference = C3;
+ValeurCmp = 22p;
+IdModule  = rcl:C_200;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A7F4B;
+Reference = D1;
+ValeurCmp = READY;
+IdModule  = led:LED_RECT;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A8062;
+Reference = D2;
+ValeurCmp = PRINT;
+IdModule  = led:LED_RECT;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A808B;
+Reference = D3;
+ValeurCmp = READY;
+IdModule  = led:LED_RECT;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A7553;
+Reference = D4;
+ValeurCmp = 36V;
+IdModule  = do:DO35_500;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A8615;
+Reference = K1;
+ValeurCmp = PRINTER;
+IdModule  = conn:PSS254-10G;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A6D83;
+Reference = K2;
+ValeurCmp = ISP6;
+IdModule  = conn:WSL6G;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A797C;
+Reference = K3;
+ValeurCmp = RS232;
+IdModule  = conn:PINHEAD_1_3;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A7508;
+Reference = Q1;
+ValeurCmp = BS170;
+IdModule  = to:TO92;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A6DF8;
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = rcl:R_0207_500;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A7D91;
+Reference = R2;
+ValeurCmp = 470;
+IdModule  = rcl:R_0207_500;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A7F11;
+Reference = R3;
+ValeurCmp = 470;
+IdModule  = rcl:R_0207_500;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A7F31;
+Reference = R4;
+ValeurCmp = 470;
+IdModule  = rcl:R_0207_500;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A6D20;
+Reference = U1;
+ValeurCmp = ATTINY2313-20PU;
+IdModule  = dip:DIP20_300;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A6E58;
+Reference = X1;
+ValeurCmp = 8MHz;
+IdModule  = rcl:XTAL_200;
+EndCmp
+
+EndListe

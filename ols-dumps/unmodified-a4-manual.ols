@@ -1,0 +1,26 @@
+;Size: 12
+;Rate: 2000
+;Channels: 8
+;EnabledChannels: 255
+;TriggerPosition: 1226
+;Compressed: true
+;AbsoluteLength: 24576
+;CursorEnabled: true
+;Cursor0: 8038
+;Cursor1: 8686
+;Cursor2: 10368
+;Cursor3: 10796
+;Cursor4: 11414
+;Cursor5: 13115
+0000000f@0
+0000000e@1228
+0000000f@1298
+0000000e@1420
+0000000f@1434
+0000000d@8041
+00000009@8687
+00000001@10368
+00000003@10796
+00000007@11417
+0000000f@13115
+0000000f@24576

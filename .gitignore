@@ -1,0 +1,7 @@
+.local.vimrc
+*.[od]
+*.elf
+*.lss
+*.sym
+*.bak
+*.kicad_pcb-bak
