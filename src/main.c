@@ -188,8 +188,8 @@ ISR(TIMER0_COMPA_vect)
 ISR(INT0_vect)
 {
     // Just reset everything
-    // if(State == WaitingForPaperIn || State == ClutchDelay)
-    if(State != PowerOnWait)
+    if(State == WaitingForPaperIn || State == ClutchDelay)
+    //if(State != PowerOnWait)
     {
         State = Idle;
     }
