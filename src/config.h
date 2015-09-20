@@ -8,24 +8,37 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+// Printer settings
+#define PRINTRES        1200            // Resolution, either 1200 or 2400 (dpi)
+
 // All delay times are measured in milliseconds
 #define T_HALL_L        6               // Hall sensor timeout. After this time
                                         // is elapsed without a pin change, the
                                         // motor is considered stopped
 #define T_POWRON        5000            // Delay to allow printer to start up
 
-#define T_CLUTCH        3406            // Delay between starting print job and
+#if PRINTRES == 1200                    // Printer set to 1200dpi
+
+#define T_CLUTCH        3559            // Delay between starting print job and
                                         // pulling in carrier/activating manual
                                         // paper feed sensor
-#define T_EXIT_H        841             // Delay between activation of paper in
+#define T_EXIT_H        1666            // Delay between activation of paper in
                                         // and activation of exit sensor
-#define T_MNPF_L        213             // Delay before deactivation of manual
+#define T_MNPF_L        419             // Delay before deactivation of manual
                                         // paper feed sensor after exit sensor
                                         // is activated
-#define T_PPIN_L        311             // Delay before deactivation of paper
+#define T_PPIN_L        630             // Delay before deactivation of paper
                                         // in sensor
-#define T_EXIT_L        849             // Delay before deactivation of exit
+#define T_EXIT_L        1689            // Delay before deactivation of exit
                                         // sensor
+
+#else                                   // Timing for 2400dpi image resolution
+#define T_CLUTCH        3406
+#define T_EXIT_H        841
+#define T_MNPF_L        213
+#define T_PPIN_L        311
+#define T_EXIT_L        849
+#endif
 
 #define D_LED_RD        DDRD            // Red status LED
 #define O_LED_RD        PORTD
