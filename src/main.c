@@ -25,6 +25,7 @@ int main(void)
     O_EXITSO |= (1 << P_EXITSO);
     D_EXITSO |= (1 << P_EXITSO);
     D_CLUTCH |= (1 << P_CLUTCH);
+    O_CLUTCH |= (1 << P_CLUTCH);
 
 
     //// TIMER 0 ////
