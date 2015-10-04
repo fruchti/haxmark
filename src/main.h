@@ -7,14 +7,27 @@
 
 typedef enum
 {
-    PowerOnWait,
-    Idle,
-    ClutchDelay,
-    WaitingForPaperIn,
-    ExitOnDelay,
-    ManualPaperFeedOffDelay,
-    PaperInOffDelay,
-    ExitOffDelay
+    PowerOnWait,                        // Power-on test state with all outputs
+                                        // enabled
+
+    Idle,                               // Waiting for print job
+
+    AlignFeed,                          // Initial pulling in for proper align-
+                                        // ment of the carrier
+
+    ClutchDelay,                        // Delay before main carrier feed
+
+    WaitingForFeed,                     // Waits for the end of the carrier
+                                        // alignment mark
+
+    WaitingForPaperIn,                  // Waits for the paper in mark on the
+                                        // carrier
+
+    ExitOnDelay,                        // Wait for print to be completed
+
+    ManualPaperFeedOffDelay,            // Various delays
+    PaperInOffDelay,                    // for disabling the
+    ExitOffDelay                        // sensor signals again
 } State_t;
 
 int main(void);

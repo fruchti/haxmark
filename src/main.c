@@ -84,10 +84,21 @@ int main(void)
                 // blocked by carrier
                 if(HallSensorTimer < T_HALL_L && !(I_NPPINS & (1 << P_NPPINS)))
                 {
-                    // Block carrier
-                    O_CLUTCH |= (1 << P_CLUTCH);
+                    // Unblock carrier
+                    O_CLUTCH &= ~(1 << P_CLUTCH);
                     O_LED_GN |= (1 << P_LED_GN);
                     O_LED_RD &= ~(1 << P_LED_RD);
+
+                    State = AlignFeed;
+                }
+                break;
+            case AlignFeed:
+                // Check if carrier has moved to the first marked position
+                if(I_NPPINS & (1 << P_NPPINS))
+                {
+                    // Block carrier
+                    O_CLUTCH |= (1 << P_CLUTCH);
+
                     State = ClutchDelay;
                     MillisecondCounter = 0;
                 }
@@ -101,6 +112,15 @@ int main(void)
                     // Enable manual paper feed sensor
                     O_MNPFSO &= ~(1 << P_MNPFSO);
 
+                    State = WaitingForFeed;
+                }
+                break;
+            case WaitingForFeed:
+                // Check if the end of the alignment marking on the carrier is
+                // hit (this state is needed because the alignment marking would
+                // lead to skipping the WaitingForPaperIn state right away)
+                if(!(I_NPPINS & (1 << P_NPPINS)))
+                {
                     State = WaitingForPaperIn;
                 }
                 break;

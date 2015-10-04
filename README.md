@@ -27,10 +27,11 @@ The main hardware difference between E260d and E360d is the use of a different o
 
 The hardware modifications are mainly the same as in [the original instructable](http://www.instructables.com/id/Modification-of-the-Lexmark-E260-for-Direct-Laser--1). But, because the motor directly pulls in the carrier, an additional clutch is needed to keep the rollers stopped unless the carrier actually should move. The printer provides a solenoid, which is able to block the rollers, on its left side. Cut the low-side cable at the printer's controller board and connect it to the new MCU board. Leave the other end connected to 24V. The MCU board also needs a connection to a hall sensor of the motor in order to be able to check if it is running. I tapped the lowest pin on J17, but any of the three sensor lines should work. Just be sure that you do not connect the MCU to one of the motor windings (the three wires with the ferrite bead over them), as they are driven with 24V.
 
-I made also some smaller modifications:
+I made some additional modifications:
 
 - I use a 18cm wide and 30cm long carrier. The 60cm long carrier proved to be way to long for me.
 - I swapped the forked light barrier "new paper in sensor" for a reflective sensor (SFH900-2). This way I can use a piece of tape on the carriers bottom instead of a hole. If you use the original approach, you have to invert the signal in the AVR's source code.
+- My carrier has two markings for the reflective light sensor. The new first marking triggers the sensor when the carrier is pulled in just slightly. The MCU board uses this to feed the carrier into the printer into the exact same starting position every time. Especially for double-sided PCBs this is useful as it provides better alignment. The markings on my carrier are now 113mm and 181mm from the top with the reflective light sensor being 100mm in front of the first axle.
 
 ### New MCU board
 
