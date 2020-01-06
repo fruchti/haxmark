@@ -10,6 +10,8 @@ The printer behaves reasonably predictable and the way it should. The results ar
 
 ![MCU Board](https://raw.githubusercontent.com/fruchti/haxmark/master/samples/001.jpg)
 
+A review of the project and some potential issues of the process in general can be found in [a blog post of mine](https://25120.org/post/haxmark/).
+
 ## Modification
 
 ### Some notes before you modify your printer
